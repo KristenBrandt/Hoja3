@@ -1,4 +1,4 @@
-public class GnomeSort {
+public class GnomeSort implements Comparable<Integer> {
 
     //sacado de Java the complete reference, seventh edition
     static void gnomeSort(int arr[], int n)
@@ -19,5 +19,10 @@ public class GnomeSort {
             }
         }
         return;
+    }
+
+    @Override
+    public int compareTo(Integer o) {
+        return 0;
     }
 }
