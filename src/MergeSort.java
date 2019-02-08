@@ -1,7 +1,7 @@
 public class MergeSort {
 
     // Del libro de java subido en canvas
-@// TODO: 2019-02-07  TODAVIA NO SIRVE ESTA PARTE
+  // TODO: 2019-02-07  TODAVIA NO SIRVE ESTA PARTE
     private static void mergeSort (int data[], int temp[], int low, int middle, int high)
 // pre: data[middle..high] are ascending
 // temp[low..middle-1] are ascending
