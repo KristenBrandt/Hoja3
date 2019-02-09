@@ -11,7 +11,7 @@ public class Main {
     	create("Archivo.txt");
     	ArrayList[] Lista = ReadFile("Archivo.txt");
     	GnomeSort.gnomeSort(Lista);
-    	Merge.mergeSort(Lista, Lista.length);
+    	Merge.mergeSort(Lista);
     }
        
         public static int read (String Archivo) {
