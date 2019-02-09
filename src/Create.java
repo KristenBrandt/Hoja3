@@ -1,18 +1,24 @@
-import java.io.File;
-import java.util.List;
+import java.io.*;
 import java.util.Random;
-import java.util.ArrayList;
 
 public class Create {
 
-    public static void ListadeNumeros(int num, int min, int max) {
-        int arr[] = new int[num];
-        Random random = new Random();
-        //File text = new File();
-        random.ints(num,min, max).forEach(System.out::println);
-        //random.ints(num,min, max).forEach(arr.add);
-
-
-    }
+    public static void ListadeNumeros (String archivo ) throws IOException {
+    	try {
+			FileOutputStream file = new FileOutputStream("Archivo.txt");
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(file));
+			Random random = new Random();
+			for(int i = 0; i<3000; i++) {
+				int Num = random.nextInt(3000);
+				bw.write(Num);
+			}
+			bw.close();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+    	
+        
+    }   
 }
 
