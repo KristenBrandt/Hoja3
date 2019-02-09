@@ -1,6 +1,7 @@
 public class InsertionSort implements Comparable<Integer> {
 
-    public static void insertionSort(int data[], int n)
+    //sacado de Java the complete reference, seventh edition
+    public static void insertionSort(int[] data, int n)
 // pre: 0 <= n <= data.length
 // post: values in data[0..n-1] are in ascending order
     {

@@ -2,15 +2,16 @@ import java.util.Vector;
 import java.io.*;
 import java.util.*;
 
+//sacado de Java the complete reference, seventh edition
 
 public class RadixSort implements Comparable<Integer> {
 
         // A utility function to get maximum value in arr[]
-        static int getMax(int arr[], int n)
+        static int getMax(int arr [], int n)
         {
             int mx = arr[0];
             for (int i = 1; i < n; i++)
-                if (arr[i] > mx)
+                if (arr[i] > (mx) )
                     mx = arr[i];
             return mx;
         }

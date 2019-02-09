@@ -1,8 +1,7 @@
 public class MergeSort implements Comparable<Integer> {
 
     // Del libro de java subido en canvas
-    // TODO: 2019-02-07  TODAVIA NO SIRVE ESTA PARTE
-    private static void merge(int data[], int temp[], int low, int middle, int high)
+    private static void merge(Comparable [] data, Comparable[] temp, int low, int middle, int high)
 // pre: data[middle..high] are ascending
 // temp[low..middle-1] are ascending
 // post: data[low..high] contains all values in ascending order
@@ -12,7 +11,7 @@ public class MergeSort implements Comparable<Integer> {
         int di = middle; // destination index
 // while two lists are not empty merge smaller value
         while (ti < middle && di <= high) {
-            if (data[di] < temp[ti]) {
+            if (data[di].compareTo(temp[ti])<0) {
                 data[ri++] = data[di++]; // smaller is in high data
             } else {
                 data[ri++] = temp[ti++]; // smaller is in temp
@@ -25,8 +24,8 @@ public class MergeSort implements Comparable<Integer> {
 // ...or some values left (in correct place) in data array
     }
 
-    private static void mergeSortRecursive(int data[],
-                                           int temp[],
+    private static void mergeSortRecursive(Comparable [] data,
+                                           Comparable [] temp,
                                            int low, int high)
 // pre: 0 <= low <= high < data.length
 // post: values in data[low..high] are in ascending order
@@ -48,11 +47,11 @@ public class MergeSort implements Comparable<Integer> {
         merge(data,temp,low,middle,high);
     }
 
-    public static void mergeSort(int data[], int n)
+    public static void mergeSort(Comparable[] data, int n)
 // pre: 0 <= n <= data.length
 // post: values in data[0..n-1] are in ascending order
     {
-        mergeSortRecursive(data,new int[n],0,n-1);
+        mergeSortRecursive(data,new Comparable[n],0,n-1);
     }
 
     @Override
