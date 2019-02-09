@@ -7,6 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
+        //Esta lista es solo para probar
         int arr[] = {3,2,10};
         //Para hacer la lista
         System.out.println("Ingrese el numero de datos que quiere en su lista (se puede un numero de 10 a 3000:");

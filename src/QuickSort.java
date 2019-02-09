@@ -1,4 +1,4 @@
-public class QuickSort {
+public class QuickSort implements Comparable<Integer> {
 
     private int partition(int arr[], int begin, int end) {
         int pivot = arr[end];
@@ -30,4 +30,8 @@ public class QuickSort {
         }
     }
 
+    @Override
+    public int compareTo(Integer o) {
+        return 0;
+    }
 }
