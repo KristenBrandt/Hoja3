@@ -4,7 +4,7 @@ public class comparar implements Comparable <comparar> {
 	comparar(int x){
 		this.x=x;
 	}
-
+	@Override
 	public int compareTo(comparar other) {
 		if(x==other.x) { 
 			return 0;  
