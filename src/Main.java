@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
     	create("Archivo.txt");
-    	ArrayList[] Lista = ReadFile("Archivo");
+    	ArrayList[] Lista = ReadFile("Archivo.txt");
     	GnomeSort.gnomeSort(Lista);
     	Merge.mergeSort(Lista, Lista.length);
     }
