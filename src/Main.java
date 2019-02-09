@@ -2,40 +2,54 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.io.*;
+import java.util.Random;
+
+import static java.net.URI.create;
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        //Para hacer la lista
-        System.out.println("Ingrese el numero de datos que quiere en su lista (se puede un numero de 10 a 3000:");
-        int numeros = input.nextInt();
-        System.out.println("Se esta generando una lista con " + numeros + " numeros....");
-        Create.ListadeNumeros(numeros,1,1000);
-         // TODO: 2019-02-07 LOS NUMEROS GENERADOS TIENEN QUE SER GUARDASDOS EN UNA LISTA
-
-
-        GnomeSort.gnomeSort(arr, arr.length);
-        System.out.print("Lista ordenada utilizando Gnome Sort: ");
-        System.out.println(Arrays.toString(arr));
-
-        MergeSort.mergeSort(arr,arr.length);
-        System.out.print("Lista ordenada utilizando Merge Sort: ");
-        System.out.println(Arrays.toString(arr));
-
-        RadixSort.radixsort(arr,arr.length);
-        System.out.print("Lista ordenada utilizando Radix Sort: ");
-        System.out.println(Arrays.toString(arr));
-
-        InsertionSort.insertionSort(arr,arr.length);
-        System.out.print("Lista ordenada utilizando Insertion Sort: ");
-        System.out.println(Arrays.toString(arr));
-
-
-
-        
-
+        create("Archivo.txt");
+        ArrayList[] Lista = ReadFile("Archivo.txt");
+        GnomeSort.gnomeSort(Lista);
+        Merge.mergeSort(Lista, Lista.length);
     }
 
-}
+    public static int read (String Archivo) {
+        try {
+            FileReader Lector = new FileReader(Archivo) {
+                BufferedReader reader = new BufferedReader(Lector);
+                comparar[] NumA = new comparar [3000];
+                int x = 0;
+                String LectorL = reader.readLine();
+             	while (LectorL != null) {
+                    comparar cArray = new comparar(x);
+                    NumA[x] = cArray;
+                    LectorL = reader.readLine();
+                    x = x + 1;
+                }
+            }catch(Exception var10) {
+
+            }
+            return NumA;
+        }
+        public static void create (String Archivo) {
+            try {
+                File file = new File(Archivo);
+                FileOutputStream fileS = new FileOutputStream(file);
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fileS));
+                Random random = new Random();
+                for(int i = 0; i<3000; i++) {
+                    int Num = random.nextInt(3000);
+                    bw.write(Num);
+                }
+                bw.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+    }

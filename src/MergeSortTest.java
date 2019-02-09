@@ -9,7 +9,7 @@ public class MergeSortTest {
 
     @Test
     public void mergeSort() {
-            int arr[] = {3,2,10};
+            Comparable []arr = {3,2,10};
             MergeSort.mergeSort(arr,arr.length);
             String correcto = "[2, 3, 10]";
             String coso = Arrays.toString(arr);
